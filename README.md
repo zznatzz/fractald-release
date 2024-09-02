@@ -13,6 +13,9 @@ With strong tooling and support, building on Fractal is straightforward.
 ### Running Fractal Bitcoin
 
 **Run on linux:**
+open two Terminals -
+
+In first terminal run these commands 
 
 1. Download the release:
 
@@ -64,3 +67,37 @@ cd fractald-docker
 ```bash
 docker-compose up -d
 ```
+
+
+Open the second terminal, and go to the /bin directory
+
+Create a Legacy wallet
+
+./bitcoin-wallet -wallet=TestnetWallet -legacy create
+
+
+
+Dump Bitcoin wallet private key
+
+Dump pkey command 
+#to check your home name and path echo $HOME 
+
+./bitcoin-wallet -wallet=/home/YOUR_NAME/.bitcoin/wallets/TestnetWallet/wallet.dat -dumpfile=/home/YOUR_NAME/.bitcoin/wallets/TestnetWallet/MyPK.dat dump
+
+
+Go to the data wallet directory 
+
+1. cat MyPK.dat 
+2. The last string is your PK
+
+
+
+#3. Import PK into Unisat 
+
+1. Copy that PK from the previous step 
+2. Open Unisat Wallet -> Settings cog -> Expand view -> Top left corner click on the wallet #1 ->  Top right corner click on the "+" icon  -> Restore from single private key -> paste key -> Select wallet type, I created legacy wallet in my case.
+
+
+
+
+
