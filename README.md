@@ -69,7 +69,7 @@ docker-compose up -d
 ```
 
 
-Open the second terminal, and go to the /bin directory
+Open the second terminal, and go to the cd fractald-0.1.8-x86_64-linux-gnu/bin directory
 
 Create a Legacy wallet
 
